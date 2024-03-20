@@ -3,6 +3,7 @@ const {connection}=require("./config/db")
 const {userRoute}=require("./routes/user_route")
 const {bookRoute}=require("./routes/book_route")
 const { orderRoute } = require("./routes/order_route")
+require("dotenv").config()
 const app=express()
 app.use(express.json())
 app.get("/",(req,res)=>{
@@ -13,7 +14,7 @@ app.use("/api",userRoute)
 app.use("/api",bookRoute)
 app.use("/api",orderRoute)
 
-app.listen(8080,async()=>{
+app.listen(process.env.port,async()=>{
    try{
 await connection
 console.log("connected with MongoDB")

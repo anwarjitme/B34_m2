@@ -1,5 +1,6 @@
 const mongoose=require("mongoose")
-const connection=mongoose.connect("mongodb+srv://anwarjitme:anwarjitme@cluster0.wdgpysq.mongodb.net/masai_dbs?retryWrites=true&w=majority&appName=Cluster0",
+require("dotenv").config()
+const connection=mongoose.connect(process.env.url,
 { useNewUrlParser: true, useUnifiedTopology: true })
 module.exports={
     connection
