@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "echo \"No build specified\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js"
   },
+  "repository": {
+         "type": "git",
+         "url": "git+https://github.com/anwarjitme/B34_m2.git"
+     },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+           "url": "https://github.com/anwarjitme/B34_m2/issues"
+     },
+       "homepage": "https://github.com/anwarjitme/B34_m2#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
